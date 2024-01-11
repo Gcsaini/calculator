@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css" />
+  </head>
+  <body>
+    <div class="Calculator">
+      <div class="maincal">
+        <div>
+          <input
+            type="text"
+            id="fnumber"
+            placeholder="First Number"
+            onfocus="changeFocus('fnum')"
+          />
+          <input
+            type="text"
+            id="snumber"
+            placeholder="Second Number"
+            onfocus="changeFocus('snum')"
+          />
+          <div id="result"></div>
+        </div>
+        <div class="mainbtn">
+          <div>
+            <button type="submit" class="btncolor" onclick="reset()">AC</button>
+            <button
+              onclick="percentage()"
+              value="%"
+              type="submit"
+              class="btncolor"
+            >
+              %
+            </button>
+            <button onclick="backspace()" class="btncolor">C</button>
+            <button onclick="divide()" value="/" type="submit" class="btncolor">
+              /
+            </button>
+          </div>
+          <div>
+            <button onclick="addValueToInput(7)">7</button>
+            <button onclick="addValueToInput(8)">8</button>
+            <button onclick="addValueToInput(9)">9</button>
+            <button
+              onclick="multiply()"
+              value="*"
+              type="submit"
+              class="btncolor"
+            >
+              *
+            </button>
+          </div>
+          <div>
+            <button onclick="addValueToInput(4)">4</button>
+            <button onclick="addValueToInput(5)">5</button>
+            <button onclick="addValueToInput(6)">6</button>
+            <button onclick="minus()" value="-" type="submit" class="btncolor">
+              -
+            </button>
+          </div>
+          <div>
+            <button onclick="addValueToInput(1)">1</button>
+            <button onclick="addValueToInput(2)">2</button>
+            <button onclick="addValueToInput(3)">3</button>
+            <button onclick="sum()" value="+" type="submit" class="btncolor">
+              +
+            </button>
+          </div>
+          <div>
+            <button onclick="addValueToInput('00')">00</button>
+            <button onclick="addValueToInput(0)">0</button>
+            <button onclick="addValueToInput('.')">.</button>
+            <button type="submit" style="background-color: tomato">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="cal.js"></script>
+  </body>
+</html>
